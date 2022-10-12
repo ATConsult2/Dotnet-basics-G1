@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetBasicsCsharp", "dotnetBasicsCsharp\dotnetBasicsCsharp.csproj", "{783E98AE-510C-4AA7-A1B3-3EE924649F59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlow", "TestFlow\TestFlow.csproj", "{1798F738-41D6-4858-84DB-EDA4B7827420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{783E98AE-510C-4AA7-A1B3-3EE924649F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783E98AE-510C-4AA7-A1B3-3EE924649F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783E98AE-510C-4AA7-A1B3-3EE924649F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783E98AE-510C-4AA7-A1B3-3EE924649F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1798F738-41D6-4858-84DB-EDA4B7827420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1798F738-41D6-4858-84DB-EDA4B7827420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1798F738-41D6-4858-84DB-EDA4B7827420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1798F738-41D6-4858-84DB-EDA4B7827420}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7507E04B-919C-4313-8F74-92E06FD56BA5}
+	EndGlobalSection
+EndGlobal
