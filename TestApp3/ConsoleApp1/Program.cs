@@ -13,7 +13,29 @@ namespace andestech.learning2022.krasn
         static int Summa(params int[] numbers)
         {
             int summa = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            { 
+            summa += numbers[i];    
+            }
+            return summa;
+        }
 
+        static int Summa3(int[] numbers)
+        {
+            int summa = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                summa += numbers[i];
+            }
+            return summa;
+        }
+
+
+        static int Summa2(params int[] numbers)
+        {
+            int summa = 0;
+            foreach (int number in numbers) summa += number;
+            
             return summa;
         }
 
@@ -39,8 +61,19 @@ namespace andestech.learning2022.krasn
             //new Random().NextBytes(arr);
             foreach (int element in arr) Write(element + ", ");
             Write("\b\b]\n");
+            // summa test 
+            WriteLine(Summa(1, 2, 3, 4, 5, 6, 7, 8, 9));
+            WriteLine(Summa2(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
+            WriteLine(Summa(new int[] {1,2,3,4,5,6,7,8,9}));
+            // WriteLine(Summa(arr2));
+            // test command line args
+            Write("Command line args: ");
+            foreach (string arg in args) Write(arg + ", ");
+            WriteLine("\b\b.");
 
+            Write("Press any key...");
+            ReadKey();
         }
     }
 }
