@@ -30,8 +30,12 @@ namespace andestech.learning2022.krasn
             //{ Mass = 1000_000, Power = 78101010, Name = "Soyuz" };
             WriteLine(rocket31.getInfo());
 
+            WriteLine($"ID: {Rocket4.ID}, Factory: {Rocket4.ROCKETFACTORY}");
             Rocket4 rocket41 = new Rocket4("Astra", 2227777, 7000_000);
             WriteLine(rocket41.getInfo());
+            // Rocket4.ID = 12313; // readonly!!!
+            // Rocket4.ROCKETFACTORY = "AAAAA"; // const!!!
+
         }
     }
 }

@@ -9,10 +9,13 @@ namespace andestech.learning2022.krasn.rocketplant
 {
     class Rocket4
     {
-       /* private string _name;
-        private double _mass;
-        private double _power;   */ 
+        /* private string _name;
+         private double _mass;
+         private double _power;   */
 
+        public const string ROCKETFACTORY = "AAA111-BBB-ZZ";
+        public static readonly long ID = generateId();
+    
         public string Name  { get; } // readonly auto property
         public double Mass  { get; private set; }  
         public double Power { get; private set; } 
@@ -31,7 +34,7 @@ namespace andestech.learning2022.krasn.rocketplant
 
         }
 
-        private long generateId() {
+        private static long generateId() {
             return new Random().Next(1_000_000_000);
             //Name = "aaaa";  // readonly!!!
         }
