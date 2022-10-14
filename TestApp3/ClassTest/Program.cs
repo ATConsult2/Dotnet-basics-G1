@@ -28,7 +28,10 @@ namespace andestech.learning2022.krasn
 
             Rocket3 rocket31 = new Rocket3("Soyuz", 26363636, 1000_000);
             //{ Mass = 1000_000, Power = 78101010, Name = "Soyuz" };
-            WriteLine(rocket21.getInfo());
+            WriteLine(rocket31.getInfo());
+
+            Rocket4 rocket41 = new Rocket4("Astra", 2227777, 7000_000);
+            WriteLine(rocket41.getInfo());
         }
     }
 }
