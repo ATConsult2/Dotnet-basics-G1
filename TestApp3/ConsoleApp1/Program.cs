@@ -39,6 +39,14 @@ namespace andestech.learning2022.krasn
             return summa;
         }
 
+        static int Summa4(int mult, params int[] numbers)
+        {
+            int summa = 0;
+            foreach (int number in numbers) summa += number;
+
+            return summa*mult;
+        }
+
         static void Main(string[] args)
         {
             // 1-D arrays
@@ -68,6 +76,7 @@ namespace andestech.learning2022.krasn
             WriteLine(Summa(new int[] {1,2,3,4,5,6,7,8,9}));
             // WriteLine(Summa(arr2));
             // test command line args
+            
             Write("Command line args: ");
             foreach (string arg in args) Write(arg + ", ");
             WriteLine("\b\b.");
