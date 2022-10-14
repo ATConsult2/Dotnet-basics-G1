@@ -34,7 +34,7 @@ namespace andestech.learning2022.krasn.rocketplant
         }
         //.....
         public Rocket3() {
-            WriteLine("+++ ctor of Rocket2");
+            WriteLine("+++ ctor default of Rocket3");
         }
 
         //public Rocket3(string name, double mass, double power)
@@ -45,8 +45,9 @@ namespace andestech.learning2022.krasn.rocketplant
 
         //}
 
-        public Rocket3(string Name, double Power, double Mass)
+        public Rocket3(string Name, double Power, double Mass):this()
         {
+            WriteLine("+++ ctor params of Rocket3");
             this.Name = Name;
             this.Mass = Mass;
             this.Power = Power;

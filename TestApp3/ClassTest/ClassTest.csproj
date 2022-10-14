@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rocket3.cs" />
     <Compile Include="Rocket2.cs" />
     <Compile Include="Rocket.cs" />
   </ItemGroup>
