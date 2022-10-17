@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 using andestech.learning2022.krasn.library;
+using andestech.learning2022.krasn.game;
 
 namespace andestech.learning2022.krasn
 {
@@ -29,11 +30,28 @@ namespace andestech.learning2022.krasn
     
     }
 
-   
-
-
     internal class Program
     {
+        static void LoanBook(Book2 book)
+        {
+            book.Loan();
+        }
+
+        static void LoanBook2(object book)
+        {
+            if (book is Book2 b2) b2.Loan();
+        }
+
+        static void Tetris(IMovable movable) {
+            ///
+            movable.MoveLeft();
+            movable.MoveLeft();
+            movable.MoveLeft();
+            movable.Rotate(120);
+            movable.MoveRight();
+
+        }
+
         static void Main(string[] args)
         {
             Singleton s1 = Singleton.Instance;
@@ -48,6 +66,55 @@ namespace andestech.learning2022.krasn
             book2.Loan();
 
             //new Singleton(); private constructor!!!
+
+            Book2 book22 = new RareBook2(author: "Galileo", title: "omnis in pertubum", "G2-GG-22");
+            Object o = new RareBook2(author: "Galileo", title: "omnis in pertubum", "G2-GG-22");
+
+            //0------
+            ((RareBook2)o).Loan();
+            //
+            //((RareBook)o).Loan();
+
+            //1-------
+            RareBook rbook = o as RareBook;
+            //if (rbook != null) rbook.Loan();
+            rbook?.Loan();
+            //-------
+            RareBook2 rbook2 = o as RareBook2;
+            //if (rbook != null) rbook.Loan();
+            rbook2?.Loan();
+            //2-------
+            if (o is RareBook rbook1)
+            {
+                rbook1.Loan();
+            }
+
+            // --- poly test -----
+            Book2 bk2 = new RareBook2(author: "Galileo", title: "omnis in pertubum", "G2-GG-22");
+            bk2.Loan();
+
+            LoanBook(new RareBook2(author: "Galileo", title: "omnis in pertubum", "G2-GG-22"));
+            LoanBook(new ElectronicBook("AAA", "AA"));
+            LoanBook(new Book2("AAA", "AA"));
+
+            // ---- abstarct test -----
+            Book3 ordirayBook = new OrdinaryBook(
+                title: "War and Piece",
+                author: "Leo Tolstoy");
+            WriteLine(ordirayBook);
+            ordirayBook.Loan();
+
+            //------ interface test ----
+            ILonable il1 = new OrdinaryBook(
+                title: "War and Piece",
+                author: "Leo Tolstoy");
+            il1.Loan();
+
+            //------ game test -----------
+            Tetris(new MoveTesris1());
+            WriteLine();
+
+
 
 
         }

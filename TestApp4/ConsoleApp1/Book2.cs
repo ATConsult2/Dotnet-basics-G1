@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace andestech.learning2022.krasn.library
 {
-    internal class Book : Object
+    internal class Book2
     {
         public string Author { get; private set; }
         public string Title { get; private set; }
@@ -15,39 +15,52 @@ namespace andestech.learning2022.krasn.library
 
         private int _internal_id = random.Next(1_000_000);
 
-        public Book(string author, string title)
+        public Book2(string author, string title)
         {
             Author = author;
             Title = title;
         }
 
-        public void Loan() {
-            WriteLine("Loan Book.");
+        public virtual void Loan() {
+            WriteLine("Loan Book2. " + GetHashCode());
         }
         public override string ToString()
         {
-            return $"Book: \"{Title}\" by {Author}, internalId: {_internal_id}.";
+            return $"Book2: \"{Title}\" by {Author}, internalId: {_internal_id}.";
         }
 
     }
 
-    internal class RareBook : Book{
+    internal class RareBook2 : Book2{
         public string SpecialStoreId { get; private set; }
 
-        public RareBook(string author, string title, string specialStoreId):
+        public RareBook2(string author, string title, string specialStoreId):
             base(author, title)
         {
             SpecialStoreId = specialStoreId;
         }
 
-        public new void Loan()
+        public override void Loan()
         {
-            WriteLine("Loan RareBook imposible. Meet library superviser..");
+            WriteLine("Loan RareBook2 imposible. Meet library superviser.." +
+                GetHashCode());
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}\b, sId: {SpecialStoreId}";
+        }
+
+    }
+
+    class ElectronicBook : Book2
+    {
+        public ElectronicBook(string author, string title) : base(author, title)
+        {
+        }
+        public override void Loan()
+        {
+            WriteLine("Loan Electronic Book. Check email." + GetHashCode());
         }
 
 

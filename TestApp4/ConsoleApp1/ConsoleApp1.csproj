@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book3.cs" />
+    <Compile Include="Book2.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="ILonable.cs" />
+    <Compile Include="IMovable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
