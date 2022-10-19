@@ -114,7 +114,7 @@ namespace andestech.learning2022.krasn
                {7, new Box(330) }, {10, new Box(99) }
 
             };
-            dict.Add(4, new Box(100));
+            dict.Add(40, new Box(100));
             PrintCollection(dict);
 
 
