@@ -15,7 +15,7 @@ namespace andestech.learning2022.krasn
         set { Boxes[i] = value; }
         get { return Boxes[i]; }    
                }*/
-
+        
         public Box this[int i]
         {
             set => Boxes[i] = value; 

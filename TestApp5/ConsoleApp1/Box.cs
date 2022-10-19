@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace andestech.learning2022.krasn
 {
-    internal class Box
+    internal class Box 
     {
         public int Data { get; set; }
         //....
