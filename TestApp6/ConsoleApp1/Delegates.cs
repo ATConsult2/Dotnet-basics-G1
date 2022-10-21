@@ -31,9 +31,24 @@ namespace andestech.learning2022.krasn
             //.......
             del(i);
         }
+        
+        static void Main3(string[] args) {
 
-        static void Main(string[] args)
+            Library lib = new Library(new List<Book>());
+           
+
+            // 1 Handler create
+            NewBookHandler subscriber1Handler =
+               message => WriteLine($"Subscriber1 -> {message}");
+            // 2 handler connect
+            lib.NewBook += subscriber1Handler;
+
+            lib.Add(new Book() { Title = "Aelita", Author = "A.Tolstoy" });
+            lib.Add(new Book() { Title = "Giperboloid od Garin", Author = "A.Tolstoy" });
+        }
+        static void Main2(string[] args)
         {
+            #region Delagate & Lambdas 
             TestDelegate1(F1, 10);
             TestDelegate1(F2, 20);
             TestDelegate2(F1, 10);
@@ -67,6 +82,8 @@ namespace andestech.learning2022.krasn
                 };
 
             WriteLine(calculus["/"](1,5));
+            #endregion
+
         }
     }
 }
